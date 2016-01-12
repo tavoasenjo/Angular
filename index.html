@@ -7,6 +7,13 @@
 </head>
 <!-- Body tag will contain a directive, which will hold the name of the app. This tells Angular where to bootstrap (start) our whishingList app. Make sure the string in the module method matches the NG app -->
 <body ng-app="whishList">
+
+	<!-- here I will call the custom directive helloWorld. Note that the tag is not exactly same than the name of the directive. html is case insensitive  -->
+	<hello-world></hello-world>
+
+	<!-- If we dont want to use a custom tag, we can move our directive into a div -->
+	<div hello-world></div>
+
 	<script src="vendor/angular.js" type="text/javascript"></script>
 	<script src="scripts/app.js" type="text/javascript"></script>
 	<script src="scripts/hello-world.js" type="text/javascript"></script>
