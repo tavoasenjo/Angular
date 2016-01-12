@@ -10,18 +10,19 @@
 
 	<h1>Tavo's Wish List</h1>
 
-	<div class="list">
+	<div ng-controller="mainCtrl" class="list">
 		<input type="checkbox"/>
 		<label class="style-label">Go Pro</label>
 		<input class="style-label" type="text"/>
-	</div>
+	
 
-	<div class="actions">
-		<a href="">edit</a>	
-		<a href="">save</a>
-		<a href="" class="delete">delete</a>		
+		<div class="actions">
+			<a href="">edit</a>	
+			<a href="" ng-click="helloWorld()">save</a>
+			<a href="" class="delete">delete</a>		
+		</div>
 	</div>
-
+	
 	<script src="vendor/angular.js" type="text/javascript"></script>
 	<script src="scripts/app.js" type="text/javascript"></script>
 </body>
