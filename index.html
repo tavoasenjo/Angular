@@ -12,14 +12,14 @@
 		<h1>Tavo's Wish List</h1>
 		<div ng-repeat="wish in wishes">
 			<input ng-model="whish.completed" type="checkbox"/>
-			<label ng-hide="editing" class="style-label"> {{ wish.name }} </label>
-			<input ng-show="editing" ng-model="wish.name" class="style-label" type="text"/>
+			<label ng-hide="editing" class="edited"> {{ wish.name }} </label>
+			<input ng-change="wish.edited = true " ng-blur="editing = false;" ng-show="editing" ng-model="wish.name" class="style-label" type="text"/>
 		
 
 			<div class="actions">
-				<a ng-click=" editing = !editing"href="">edit</a>	
+				<a ng-class="{'colorClass': editing}" ng-click=" editing = !editing"href="">edit</a>	
 				<a href="" ng-click="helloWorld()">save</a>
-				<a href="" class="delete">delete</a>		
+				<a href="" class="delete edited">delete</a>		
 			</div>
 		</div> <!-- End of ng-repeat -->
 	</div>

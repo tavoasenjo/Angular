@@ -1,0 +1,7 @@
+.colorClass{
+	color: red;
+}
+
+.edited label:after{
+	content: "Edited";
+}
