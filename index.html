@@ -8,19 +8,20 @@
 <!-- Body tag will contain a directive, which will hold the name of the app. This tells Angular where to bootstrap (start) our whishingList app. Make sure the string in the module method matches the NG app -->
 <body ng-app="whishList">
 
-	<h1>Tavo's Wish List</h1>
-
 	<div ng-controller="mainCtrl" class="list">
-		<input type="checkbox"/>
-		<label class="style-label">Go Pro</label>
-		<input class="style-label" type="text"/>
-	
+		<h1>Tavo's Wish List</h1>
+		<div ng-repeat="wish in wishes">
+			<input ng-model="whish.completed" type="checkbox"/>
+			<label ng-hide="editing" class="style-label"> {{ wish.name }} </label>
+			<input ng-show="editing" ng-model="wish.name" class="style-label" type="text"/>
+		
 
-		<div class="actions">
-			<a href="">edit</a>	
-			<a href="" ng-click="helloWorld()">save</a>
-			<a href="" class="delete">delete</a>		
-		</div>
+			<div class="actions">
+				<a ng-click=" editing = !editing"href="">edit</a>	
+				<a href="" ng-click="helloWorld()">save</a>
+				<a href="" class="delete">delete</a>		
+			</div>
+		</div> <!-- End of ng-repeat -->
 	</div>
 	
 	<script src="vendor/angular.js" type="text/javascript"></script>

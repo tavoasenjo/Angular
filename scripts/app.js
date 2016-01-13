@@ -4,4 +4,15 @@ angular.module("whishList", [])
 	$scope.helloWorld = function(){
 		console.log("Hello World");
 	};
+
+	$scope.wishes = [
+		{"name": "Go Pro"},
+		{"name": "Macbook Pro"},
+		{"name": "Shave Machine"},
+		{"name": "Play Station 4"},
+		{"name": "Ticket to Bahamas"},
+		{"name": "Apple Watch 2"},
+		{"name": "Dev Course Subscription"}
+	]
+
 });
