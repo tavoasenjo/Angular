@@ -1,18 +1,20 @@
 // the first parameter is the name of the application! Te second parameter is an empty array, and defines the dependencies of the app. If you dont have dependencies, just leave an empty array
 angular.module("whishList", [])
-.controller('mainCtrl', function($scope){
+.controller('mainCtrl', function($scope, dataService){
+	$scope.helloConsole = dataService.helloConsole;
+
 	$scope.learningNgChange = function(){
 		console.log("An input has changed");
 	};
+})
 
-	$scope.wishes = [
-		{"name": "Go Pro"},
-		{"name": "Macbook Pro"},
-		{"name": "Shave Machine"},
-		{"name": "Play Station 4"},
-		{"name": "Ticket to Bahamas"},
-		{"name": "Apple Watch 2"},
-		{"name": "Dev Course Subscription"}
-	]
+.service('dataService', function($http){
+	this.helloConsole = function(){
+		console.log('this is the hello console service!');
+	};
 
+	this.getWhishes = $http.get('Mock/wishes.json')
+	.then(function(response){
+		
+	})
 });
