@@ -6,6 +6,11 @@ angular.module("whishList", [])
 	$scope.learningNgChange = function(){
 		console.log("An input has changed");
 	};
+
+	dataService.getWishes(function(response){
+		console.log(response.data);
+		$scope.wishes = response.data;
+	});
 })
 
 .service('dataService', function($http){
@@ -13,8 +18,8 @@ angular.module("whishList", [])
 		console.log('this is the hello console service!');
 	};
 
-	this.getWhishes = $http.get('Mock/wishes.json')
-	.then(function(response){
-		
-	})
+	this.getWishes = function(callback){
+		$http.get('Mock/wishes.json')
+			.then(callback)	
+	} 
 });
