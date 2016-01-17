@@ -10,6 +10,9 @@
 
 	<div ng-controller="mainCtrl" class="list">
 		<h1>Tavo's Wish List</h1>
+		<div class="add">
+			<a href="" ng-click="addWishes()">+ Add a New Task</a>
+		</div>
 		<div ng-repeat="wish in wishes">
 			<input ng-model="whish.completed" type="checkbox"/>
 			<label ng-hide="editing" class="edited"> {{ wish.name }} </label>
