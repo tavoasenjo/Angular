@@ -17,9 +17,10 @@ angular.module("wishList")
 		$scope.wishes = response.data;
 	});
 
-	$scope.deleteWish = function(wish){
+	$scope.deleteWish = function(wish, $index){
 		dataService.deleteWish(wish);
-	}
+		$scope.wishes.splice($index, 1);
+	};
 
 	$scope.saveWish = function(wish){
 		dataService.saveWish(wish);

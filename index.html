@@ -22,7 +22,7 @@
 			<div class="actions">
 				<a ng-class="{'colorClass': editing}" ng-click=" editing = !editing"href="">edit</a>	
 				<a href="" ng-click="saveWish(wish)">save</a>
-				<a href="" ng-click="deleteWish(wish)" class="delete edited">delete</a>	
+				<a href="" ng-click="deleteWish(wish, $index)" class="delete edited">delete</a>	
 				<a href="" ng-click="helloConsole()">Hello</a>	
 			</div>
 		</div> <!-- End of ng-repeat -->
