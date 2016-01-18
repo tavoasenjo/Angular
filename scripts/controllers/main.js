@@ -20,4 +20,8 @@ angular.module("wishList")
 	$scope.deleteWish = function(wish){
 		dataService.deleteWish(wish);
 	}
+
+	$scope.saveWish = function(wish){
+		dataService.saveWish(wish);
+	}
 });

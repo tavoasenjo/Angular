@@ -14,7 +14,7 @@ angular.module("wishList")
 		// other logix
 	}; 
 
-	// this.saveWish = function(wishes){
-	// 	console.log("The "+ wishes.name + " was saved!");
-	// };
+	this.saveWish = function(wish){
+		console.log("The "+ wish.name + " was saved!");
+	};
 });
