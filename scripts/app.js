@@ -15,6 +15,8 @@ angular.module("whishList", [])
 
 	this.getWhishes = $http.get('Mock/wishes.json')
 	.then(function(response){
+		console.log(response.data);
+		return response.data;
 		
 	})
 });
