@@ -5,3 +5,8 @@
 .edited label:after{
 	content: "Edited";
 }
+
+.completed{
+	color: #bababa;
+	text-decoration: line-through;
+}

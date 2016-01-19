@@ -3,7 +3,7 @@ angular.module("wishList")
 .controller('mainCtrl', function($scope, dataService){
 	$scope.addWishes = function(){
 		var wish = {name: "This is a new wish."};
-		$scope.wishes.push(wish); 
+		$scope.wishes.unshift(wish); 
 	};
 
 	$scope.helloConsole = dataService.helloConsole;
